@@ -1,0 +1,281 @@
+@import "@styles/design-system.scss";
+
+// Button default style
+.btnDefault {
+  height: 40px;
+  padding: 9px 16px;
+  border-color: transparent;
+}
+
+.btnLarge {
+  height: 48px;
+  padding: 12px, 32px;
+  border-color: transparent;
+}
+
+.btnSmall {
+  height: 32px;
+  padding: 5px 8px;
+  border-color: transparent;
+}
+
+.iconBtnDefault {
+  width: 40px;
+  height: 40px;
+  padding: 9px 12px;
+  .btnIcon {
+    font-size: $solid-medium;
+  }
+}
+
+.iconBtnSmall {
+  width: 32px;
+  height: 32px;
+  padding: 5px 8px;
+  .btnIcon {
+    font-size: $solid-medium;
+  }
+}
+
+.iconBtnLarge {
+  width: 48px;
+  height: 48px;
+  padding: 12px 16px;
+  .btnIcon {
+    font-size: $solid-medium $solid-large;
+  }
+}
+
+.btnText {
+  font-size: $text-14;
+  font-family: $open-sans;
+  font-weight: 600;
+  line-height: 22px;
+  .btnIcon {
+    font-size: $solid-medium;
+    margin-right: 8px;
+  }
+  .spaceLeft {
+    margin: 0 0 0 8px;
+  }
+}
+
+// CTA button style
+.ctaBtn {
+  background: $gradient-regular;
+  border-radius: 4px;
+  &:focus {
+    background: $gradient-regular;
+    border: 1px solid transparent;
+  }
+  &:focus-visible {
+    color: $white;
+    background: $gradient-pink-dominant;
+    border: 2px solid $link;
+  }
+  &:hover {
+    color: $white;
+    background: $gradient-pink-dominant;
+    border-color: transparent;
+  }
+  .btnText {
+    color: $white;
+  }
+}
+
+.ctaBtn[disabled] {
+  background: $white-text-secondary;
+  border: none;
+  &:hover,
+  &:focus {
+    background: $white-text-secondary;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+}
+
+// Primary button style
+.primaryBtn {
+  background: $primary-yellow-regular;
+  border-color: transparent;
+  border-radius: 4px;
+  &:focus {
+    background: $primary-yellow-regular;
+    border: 1px solid transparent;
+  }
+  &:focus-visible {
+    background: $primary-yellow-dark;
+    border: 2px solid $link;
+  }
+  &:hover {
+    background: $primary-yellow-dark;
+    border: 1px solid transparent;
+  }
+  .btnText {
+    color: $black-text-primary;
+  }
+}
+
+.primaryBtn[disabled] {
+  background: $white-text-secondary;
+  border: none;
+  &:hover,
+  &:focus {
+    background: $white-text-secondary;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+}
+
+// Secondary button style
+.secondaryBtn {
+  background: $primary-blue-regular;
+  border-color: transparent;
+  border-radius: 4px;
+  &:focus {
+    background: $primary-blue-regular;
+    border: 1px solid transparent;
+  }
+  &:focus-visible {
+    background: $primary-blue-dark;
+    border: 2px solid $link;
+  }
+  &:hover {
+    background: $primary-blue-dark;
+    border: 1px solid transparent;
+  }
+  .btnText {
+    color: $white;
+  }
+}
+
+.secondaryBtn[disabled] {
+  background: $white-text-secondary;
+  border: none;
+  &:hover,
+  &:focus {
+    background: $white-text-secondary;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+}
+
+// Outline dark button style
+.outlineDarkBtn {
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 4px;
+  &:focus {
+    background: transparent;
+    border-color: $white;
+  }
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid $link;
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: $white;
+  }
+  .btnText {
+    color: $white;
+  }
+  .btnIcon {
+    color: $white;
+  }
+}
+
+.outlineDarkBtn[disabled] {
+  background: transparent;
+  border: 1px solid $white-text-disabled;
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: 1px solid $white-text-disabled;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+  .btnIcon {
+    color: $white-text-disabled;
+  }
+}
+
+// Outline lite button style
+.outlineLiteBtn {
+  background: transparent;
+  border: 1px solid $grey-darker;
+  border-radius: 4px;
+  &:focus {
+    background: transparent;
+    border: 1px solid $grey-darker;
+  }
+  &:focus-visible {
+    background: rgba(36, 39, 44, 0.08);
+    border: 2px solid $link;
+  }
+  &:hover {
+    background: rgba(36, 39, 44, 0.08);
+    border-color: $grey-darker;
+  }
+  .btnText {
+    color: $black-text-primary;
+  }
+}
+
+.outlineLiteBtn[disabled] {
+  background: transparent;
+  border: 1px solid $white-text-disabled;
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: 1px solid $white-text-disabled;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+}
+
+// Ghost button style
+.ghostBtn {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  &:focus {
+    background: transparent;
+    border: none;
+  }
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid $link;
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: $grey-darker;
+  }
+  .btnText {
+    color: $white;
+  }
+  .btnIcon {
+    color: $white;
+  }
+}
+
+.ghostBtn[disabled] {
+  background: transparent;
+  border: none;
+  &:hover,
+  &:focus {
+    background: transparent;
+    border: none;
+  }
+  .btnText {
+    color: $white-text-disabled;
+  }
+  .btnIcon {
+    color: $white-text-disabled;
+  }
+}

@@ -1,0 +1,131 @@
+/* <<<<<< Color Variables Starts >>>>>> */
+// General
+$black: #141519;
+$white: #ffffff;
+$link: #519fff;
+$informative: #2f80ed;
+
+// Brand Primary colors
+$primary-blue-regular: #2463b0;
+$primary-blue-dark: #1d569f;
+$primary-yellow-regular: #fcae16;
+$primary-yellow-dark: #e69c0c;
+
+// Brand Secondary colors
+$secondary-green: #87ccc7;
+$secondary-yellow: #eab773;
+$secondary-purple: #a28bea;
+$secondary-pink: #e06363;
+
+// Semantic colors
+$positive-clr: #00b58a;
+$error-clr: #f83636;
+$warning-clr: #ff8a00;
+
+// Yellow
+$yellow-regular: #fbc93b;
+$yellow-dark: #bb9836;
+$yellow-darker: #4f472f;
+
+// Blue
+$blue-light: #519fff;
+$blue-regular: #2363b2;
+$blue-dark: #23518a;
+$blue-darker: #243347;
+
+// Orange
+$orange-regular: #ff8a00;
+$orange-dark: #bd6c0d;
+$orange-darker: #503b23;
+
+// Green
+$green-regular: #00b58a;
+$green-dark: #0b8a6e;
+$green-darker: #1d433f;
+
+// Red
+$red-regular: #f83636;
+$red-dark: #b83133;
+$red-darker: #4e2a2e;
+
+// Purple
+$purple-lightest: #e4e5f9;
+$purple-regular: #a45cff;
+$purple-dark: #7e4cc0;
+$purple-darker: #3e3256;
+
+// Grey
+$grey-lightest: #919395;
+$grey-light: #565b66;
+$grey-regular: #393e44;
+$grey-dark: #2f343a;
+$grey-darker: #24272c;
+$grey-darkest: #1b1e23;
+
+// Gradient
+$gradient-regular: linear-gradient(95.74deg, #ff5856 -5.11%, #00147c 118.47%);
+$gradient-pink-dominant: linear-gradient(
+  95.74deg,
+  #ff5856 71.49%,
+  #00147c 118.47%
+);
+
+// White Text
+$white-text-primary: #ffffff;
+$white-text-secondary: #dde4eb;
+$white-text-disabled: #6b7586;
+
+// Black Text
+$black-text-primary: #24272c;
+$black-text-secondary: #66686b;
+$black-text-disabled: #919395;
+
+/* <<<<<< Font Variables Starts >>>>>> */
+// Font Size
+$xx-large: 45px;
+$x-large: 40px;
+$large: 32px;
+$text-28: 28px;
+$text-24: 24px;
+$text-22: 22px;
+$text-20: 20px;
+$text-18: 18px;
+$text-16: 16px;
+$text-14: 14px;
+$text-12: 12px;
+$text-10: 10px;
+
+// Font Family
+$open-sans: "Open Sans", sans-serif;
+$lato: "Lato", sans-serif;
+
+/* <<<<<< Responsive Variables Starts >>>>>> */
+$desktop_small_width: 1439px;
+$tablet_width: 895px;
+$mobile_width: 599px;
+
+/* <<<<<< Font Awesome Variables Starts >>>>>> */
+$solid-large: $text-16;
+$regular-large: $text-16;
+$solid-medium: $text-14;
+$regular-medium: $text-14;
+$solid-small: $text-10;
+$regular-small: $text-10;
+$solid-tiny: 8px;
+$regular-tiny: 8px;
+
+//Lms scroll bar
+
+.lms-scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 1px;
+  }
+}

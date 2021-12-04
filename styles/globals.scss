@@ -1,0 +1,41 @@
+@import "~antd/dist/antd.css";
+@import "./design-system.scss";
+@import "./helpers.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap");
+
+//Use this for global next variables.
+#__next {
+  height: 100%;
+}
+
+body {
+  color: $white;
+  background-color: $grey-darker;
+  font-family: "Open Sans", sans-serif;
+  @extend .lms-scrollbar;
+}
+
+//global antd
+.ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ant-col {
+  min-height: unset;
+}
+
+.ant-form-item-has-error :not(.ant-input-disabled).ant-input {
+  background-color: transparent;
+  border-color: $error-clr;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.ant-form-item-has-error .ant-input-number,
+.ant-form-item-has-error .ant-picker {
+  border-color: $error-clr !important;
+  &:hover {
+    background: $grey-dark !important;
+  }
+}

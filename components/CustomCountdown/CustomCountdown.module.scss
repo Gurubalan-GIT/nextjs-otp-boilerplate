@@ -1,0 +1,26 @@
+@import "@styles/design-system.scss";
+
+.countdownContainer {
+  width: fit-content;
+  :global {
+    .ant-statistic {
+      .ant-statistic-content {
+        font-size: unset;
+        .ant-statistic-content-value {
+          font-weight: 400;
+          font-size: $text-14;
+          font-family: $open-sans;
+          color: $white-text-secondary;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  .circleTimerContent {
+    font-weight: 400;
+    font-size: $text-14;
+    font-family: $open-sans;
+    color: $white-text-primary;
+    line-height: 22px;
+  }
+}

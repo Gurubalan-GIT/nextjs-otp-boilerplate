@@ -1,0 +1,83 @@
+@import "@styles/design-system.scss";
+
+.customInputWrapper {
+  .inputLabel {
+    font-family: $open-sans;
+    font-size: $text-14;
+    font-weight: 600;
+    line-height: 22px;
+    color: $white;
+    &.inputDisabledLabel {
+      color: $white-text-disabled;
+    }
+  }
+  .optionalLabel {
+    font-family: $open-sans;
+    font-size: $text-14;
+    line-height: 22px;
+    color: $white-text-disabled;
+    margin-left: 4px;
+  }
+  .extraLabelRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.customInputBox {
+  font-family: $open-sans;
+  font-size: $text-16;
+  line-height: 24px;
+  color: $white;
+  margin: 4px 0;
+  padding: 8px 16px;
+  background: $grey-dark;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  &:focus {
+    border-color: $white;
+    outline: none;
+  }
+  &:hover {
+    border-color: $white;
+  }
+  &::-webkit-input-placeholder {
+    color: $white-text-disabled;
+  }
+  &.error {
+    border: 1px solid $error-clr;
+    &:hover {
+      border-color: $error-clr;
+    }
+    &:focus {
+      border-color: $error-clr;
+    }
+  }
+}
+
+/* Hiding number type arrows for Chrome, Safari, Edge, Opera */
+.customInputBox::-webkit-outer-spin-button,
+.customInputBox::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hiding number type arrows for Firefox */
+.customInputBox[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.customInputBox[disabled] {
+  color: $white-text-disabled;
+  background: $grey-regular;
+  border: 1px solid $grey-light;
+  &:hover {
+    border-color: $grey-light;
+  }
+}
+
+.ant-form-item-has-error :not(.ant-input-disabled).ant-input {
+  background-color: transparent;
+}

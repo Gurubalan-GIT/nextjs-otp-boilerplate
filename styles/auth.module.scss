@@ -1,0 +1,83 @@
+@import "@styles/design-system.scss";
+
+.authPage {
+  margin-top: 56px;
+  padding: 80px 0;
+  @media screen and (max-width: $mobile_width) {
+    padding: 32px 16px;
+  }
+  .authCard {
+    position: relative;
+    width: 480px;
+    padding: 40px;
+    background: $grey-dark;
+    border: 1px solid $grey-regular;
+    border-radius: 8px;
+    @media screen and (max-width: $mobile_width) {
+      width: 100%;
+      padding: 32px 24px;
+    }
+    .countdownOTPWrapper {
+      margin-right: 4px;
+    }
+    .authCardTitle {
+      font-family: $lato;
+      font-weight: 900;
+      font-size: $text-22;
+      line-height: 29px;
+      text-align: center;
+      color: $white;
+      margin-bottom: 8px;
+      @media screen and (max-width: $mobile_width) {
+        font-size: $text-18;
+        line-height: 26px;
+      }
+    }
+    .authCardSubText {
+      font-family: $open-sans;
+      font-size: $text-16;
+      line-height: 24px;
+      text-align: center;
+      color: $white-text-secondary;
+      margin-bottom: 32px;
+      .mailText {
+        color: $white;
+        font-weight: 700;
+      }
+      .notYouLink {
+        color: $link;
+        margin-left: 2px;
+        &:focus {
+          border: none;
+        }
+      }
+    }
+    .submitFormItem {
+      margin-bottom: 0;
+    }
+    .submitBtn {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .authCardFooterText {
+      font-family: $open-sans;
+      font-size: $text-12;
+      line-height: 16px;
+      text-align: center;
+      color: $white-text-secondary;
+      margin: 16px 0 0;
+      .termsLink {
+        color: $link;
+        margin: 0 2px;
+        &:focus {
+          border: none;
+        }
+      }
+    }
+    .backBtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

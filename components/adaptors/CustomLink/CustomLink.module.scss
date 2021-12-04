@@ -1,0 +1,77 @@
+@import "@styles/design-system.scss";
+
+.customLink {
+  font-family: $open-sans;
+  font-weight: 600;
+  color: $primary-yellow-regular;
+
+  &.linkMedium {
+    font-size: $text-16;
+    line-height: 24px;
+  }
+  &.linkSmall {
+    font-size: $text-14;
+    line-height: 22px;
+  }
+  &.linkTiny {
+    font-size: $text-12;
+    line-height: 16px;
+  }
+
+  &.linkYellow {
+    color: $primary-yellow-regular;
+    &:hover {
+      color: $primary-yellow-regular;
+    }
+  }
+  &.linkWhite {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &.linkBlue {
+    color: $link;
+    &:hover {
+      color: $link;
+    }
+  }
+
+  &:focus-visible {
+    border: 2px solid $link;
+    border-radius: 4px;
+  }
+
+  .defaultIcon {
+    margin-left: 5px;
+  }
+
+  &.navLink {
+    font-size: $text-14;
+    line-height: 22px;
+    color: $white-text-secondary;
+    margin-right: 32px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $white;
+    }
+    &:focus {
+      border: none;
+    }
+  }
+
+  &.showTextDecoration {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &[disabled] {
+    color: $white-text-disabled;
+    &:hover {
+      color: $white-text-disabled;
+      text-decoration: none;
+    }
+  }
+}

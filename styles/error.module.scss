@@ -1,0 +1,35 @@
+@import "./design-system.scss";
+
+.errorPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 80px;
+  text-align: center;
+  .pageTitle {
+    font-family: $open-sans;
+    font-weight: bold;
+    font-size: $text-16;
+    line-height: 24px;
+    color: $white-text-secondary;
+  }
+  .pageImg {
+    width: 210px;
+    margin: 0 auto;
+  }
+  .errorHeading {
+    font-family: $lato;
+    font-weight: 900;
+    font-size: $large;
+    line-height: 42px;
+    color: $white;
+    margin: 32px 0 16px;
+  }
+  .errorContent {
+    max-width: 560px;
+    font-family: $open-sans;
+    font-size: $text-18;
+    line-height: 26px;
+    color: $white-text-secondary;
+    margin: 0 auto 24px;
+  }
+}
