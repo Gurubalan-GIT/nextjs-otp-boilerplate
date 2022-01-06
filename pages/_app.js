@@ -1,12 +1,12 @@
+import { useApollo } from "@apollo-client";
+import { ApolloProvider } from "@apollo/client";
+import { saveState } from "@helpers/redux";
+import { useStore } from "@redux/store";
+import "@styles/globals.scss";
+import { throttle } from "lodash";
 import NextHead from "next/head";
 import { Fragment } from "react";
 import { Provider } from "react-redux";
-import "@styles/globals.scss";
-import { ApolloProvider } from "@apollo/client";
-import { saveState } from "@helpers/redux";
-import { throttle } from "lodash";
-import { useApollo } from "@apollo-client";
-import { useStore } from "@redux/store";
 
 //disables console statements in production
 process.env.NEXT_PUBLIC_APP_ENV === "production" &&
@@ -19,6 +19,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   const store = useStore(pageProps.initialReduxState);
 
+  // Optional - Use this if you're planning to have Redux persist setup
   store.subscribe(
     throttle(() => {
       saveState(store.getState());

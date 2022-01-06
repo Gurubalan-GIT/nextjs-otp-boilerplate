@@ -32,7 +32,9 @@ const Login = (props) => {
     try {
       const { data } = await login({ variables: { email } });
       if (data?.login?.accessToken) {
+        // Optional - If you want to store the access token in your localStorage ( i.e after hashing / encrypting it as you see here ) or in server-side cookies
         const encryptedAuthToken = encrypt(data.login.accessToken);
+        // We do both -> Because Apollo client does not support server side cookies to be set on client side. So we are setting both in localStorage ( encrypted ) and server side cookies.
         userUpdateAction({
           encryptedAuthToken,
         });

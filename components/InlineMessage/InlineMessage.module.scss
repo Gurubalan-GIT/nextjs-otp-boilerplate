@@ -1,5 +1,4 @@
 @import "@styles/design-system.scss";
-@import "@styles/helpers.scss";
 
 .inlineMessage {
   display: inline-block;
@@ -12,7 +11,8 @@
   }
   .inlineMessageIcon {
     svg {
-      @extend .solid-medium;
+      width: $solid-medium !important;
+      height: $solid-medium;
     }
   }
   &.error {

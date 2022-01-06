@@ -1,6 +1,5 @@
 @import "~antd/dist/antd.css";
 @import "./design-system.scss";
-@import "./helpers.scss";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap");
 
 //Use this for global next variables.
@@ -13,11 +12,6 @@ body {
   background-color: $grey-darker;
   font-family: "Open Sans", sans-serif;
   @extend .lms-scrollbar;
-}
-
-//global antd
-.ant-modal-mask {
-  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .ant-col {

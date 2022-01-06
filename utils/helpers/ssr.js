@@ -40,6 +40,7 @@ export const secureAuthEndpoint = async ({ redirect, ctx }) => {
   } catch (error) {
     const gqlError = error.graphQLErrors[0];
     if (gqlError) {
+      // NOTE: This is a temporary solution to handle the case where the user has wrong authentication key, we would need to just delete the cookie and redirect to login page
       return;
     }
   }
