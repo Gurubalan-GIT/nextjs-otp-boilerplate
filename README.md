@@ -1,4 +1,5 @@
 # NextJS - OTP Template
+An OTP flow template with NextJS11, Apollo Client, and Ant Design.
 
 ## Dependencies and Practices
 
