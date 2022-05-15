@@ -37,3 +37,88 @@ An OTP flow template with NextJS 11, Apollo Client, and Ant Design.
 
 - For styles, you will need to move all styles & component style modules.
   - For [globals](styles/globals.scss) you can choose to move these styles in whichever global style file you have set up.
+
+## Expected GraphQL Schema
+### Authentication
+  - **AuthType**
+  ```
+  type AuthType {
+    accessToken: String
+    expiresAt: DateTime
+  }
+  ```
+  - **Login**
+  ```
+  login(
+    input: LoginInput!
+  ): AuthType
+
+  input LoginInput {
+    email: String!
+  }
+  ```
+  - **Logout**
+  ```
+  logout(
+    input: LogoutInput!
+  ): Boolean
+
+  input LogoutInput {
+  }
+  ```
+  - **Resend OTP**
+  ```
+  resendOtp(
+    input: ResendOtpInput!
+  ): Boolean
+
+  input ResendOtpInput {
+  email: String!
+  }
+  ```
+  - **Verify OTP**
+  ```
+  verifyOtp(
+    input: VerifyOtpInput!
+  ): AuthType
+
+  input VerifyOtpInput {
+  email: String!
+  otp: String!
+  }
+  ```
+### User
+  - **UserType**
+  ```
+  type User {
+    firstName: String
+    lastName: String
+    profilePicture: Attachment
+    userType: UserTypeEnum!
+  }
+  ```
+  - **User Details**
+  ```
+  currentUser: Learner!
+  ```
+  - **Update User**
+  ```
+  userUpdate(
+    input: UpdateInput!
+  ): Learner
+  ```
+  - **LearnerType**
+  ```
+   type Learner {
+    college: String
+    dateOfBirth: DateTime
+    email: String!
+    firstName: String
+    lastName: String
+    location: LocationType
+    mobileNumber: String
+    pensilToken: String
+    profilePicture: Attachment
+    userType: UserTypeEnum!
+  }
+  ```
